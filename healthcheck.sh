@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# File: /home/ubuntu/healthcheck.sh
+# File: /home/ubuntu/DPDZERO-Project/healthcheck.sh
 
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
-# Set your EC2 public IP
 NGINX_HOST="http://13.222.61.56:8080"
 
 # Endpoints to check
