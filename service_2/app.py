@@ -2,6 +2,13 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+@app.route("/service2")
+def service2():
+    return jsonify({"message": "Service 2 is working!"})
+
+@app.route("/")
+def home():
+    return jsonify({"message": "Service 2 is running"}), 200
 
 @app.route("/ping")
 def ping():

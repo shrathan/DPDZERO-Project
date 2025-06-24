@@ -3,10 +3,16 @@ package main
 import (
 	"encoding/json"
 	"log"
+	"fmt"
 	"net/http"
 )
 
 func main() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+   		 fmt.Fprintln(w, `{"message": "Root endpoint"}`)
+	})
+
+
 	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
 		jsonResponse(w, map[string]string{
 			"status":  "ok",
